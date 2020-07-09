@@ -1,0 +1,125 @@
+.skills{
+  background: $color-beige;
+  text-align: center;
+  padding: 100px 0;
+  & > .container{
+    & h2{
+      margin: 0 0 40px 0;
+    }
+  }
+  &__nameIndicators{
+    font-size: 22px;
+  }
+  &__indicators{
+    @include box(200px, 200px);
+    line-height: 200px;
+    background: none;
+    margin: 0 auto;
+    box-shadow: none;
+    position: relative;
+    & > span{
+      @include box(50%, 100%);
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+    }
+    &--left{
+      left: 0;
+    }
+    &--right{
+      right: 0;
+    }
+    &--bar{
+      @include box(100%);
+      background: none;
+      border-width: 12px;
+      border-style: solid;
+      position: absolute;
+      top: 0;
+      border-color: $color-skillsIndicators;
+    }
+    &--value{
+      @include box(90%);
+      border-radius: 50%;
+      background: $color-skillsIndicatorsBack;
+      font-size: 28px;
+      color: #fff;
+      line-height: 175px;
+      text-align: center;
+      position: absolute;
+      top: 5%;
+      left: 5%;
+    }
+  }
+}
+.skills__indicators .skills__indicators--left .skills__indicators--bar{
+    left: 100%;
+    border-top-right-radius: 130px;
+    border-bottom-right-radius: 130px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+.skills__indicators .skills__indicators--right .skills__indicators--bar{
+    left: -100%;
+    border-top-left-radius: 130px;
+    border-bottom-left-radius: 130px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+    animation: loading-50 1.8s linear forwards;
+}
+
+.skills__indicators.design .skills__indicators--left .skills__indicators--bar{
+    animation: loading-75 1s linear forwards 1.8s;
+}
+
+.skills__indicators.development .skills__indicators--left .skills__indicators--bar{
+    animation: loading-90 1.3s linear forwards 1.8s;
+}
+
+.skills__indicators.marketing .skills__indicators--left .skills__indicators--bar{
+    animation: loading-65 0.4s linear forwards 1.8s;
+}
+
+@keyframes loading-50{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+@keyframes loading-90{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(144deg);
+        transform: rotate(144deg);
+    }
+}
+@keyframes loading-75{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+@keyframes loading-65{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(36deg);
+        transform: rotate(36deg);
+    }
+}

@@ -1,0 +1,48 @@
+.services{
+  padding: 100px 0;
+  background: $color-beige;
+  & > .container{
+    & > .row:first-child{
+      margin-bottom: 60px;
+    }
+  }
+  &__item{
+    text-align: center;
+    &--img{
+      margin: 0 auto;
+      @include box(50px);
+    }
+    &--desc{
+      & h3{
+        margin: 10px 0;
+      }
+      & p{
+        margin: 0;
+      }
+    }
+  }
+}
+@media (min-width:769px) and (max-width:1024px) {
+  .services{
+    &__item{
+      margin-bottom: 30px;
+    }
+    & > .container-md{
+      & > .row-md:first-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+@media (max-width:768px){
+  .services{
+    &__item{
+      margin-bottom: 30px;
+    }
+    & > .container-md{
+      & > .row-md:first-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

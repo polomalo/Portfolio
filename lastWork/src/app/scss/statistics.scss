@@ -1,0 +1,51 @@
+.statictics{
+  background: $color-gradient;
+  padding: 100px 0;
+  &__item{
+    color: #fff;
+    & > .row{
+      justify-content: flex-start;
+    }
+    &--img{
+      position: relative;
+      @include box(100%);
+      & > img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 45%;
+      }
+    }
+    &--desc {
+
+      & > p{
+        color: #fff;
+        font-size: 15px;
+        &:first-child{
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+@media (min-width:769px) and (max-width:1024px) {
+  .statictics{
+    &__item{
+      margin-bottom: 20px;
+    }
+  }
+  .statictics__item--img > img {
+      width: 35%;
+  }
+}
+@media (max-width:768px){
+  .statictics__item{
+    margin-bottom: 10px;
+    &--img > img {
+        width: 25%;
+    }
+  }
+
+}

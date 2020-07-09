@@ -1,0 +1,26 @@
+.partners{
+  background: url("../images/partners/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+  text-align: center;
+  & > .container{
+    & > .row{
+      & > .col-3{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+  }
+}
+@media (min-width:769px) and (max-width:1024px){
+  .partners__img{
+    margin-bottom: 30px;
+  }
+}
+@media (max-width:768px){
+  .partners__img{
+    margin-bottom: 40px;
+  }
+}

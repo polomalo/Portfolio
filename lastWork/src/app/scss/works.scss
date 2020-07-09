@@ -1,0 +1,109 @@
+.works{
+  padding: 80px 0 40px 0;
+  &__description{
+    text-align: center;
+    padding-bottom: 70px;
+    & p{
+      margin: 20px auto 0 auto;
+      max-width: 600px;
+      font-size: 18px;
+    }
+  }
+  &__portfolio{
+    & > .row:first-child{
+      margin-bottom: 20px;
+    }
+    &--item{
+      & img{
+        display: block;
+        @include box(100%);
+      }
+      &:hover{
+        .works__portfolio--item--img{
+          position: relative;
+          &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.35);
+          }
+        }
+        cursor: pointer;
+        .works__portfolio--item--desc{
+          background: #362f2d;
+          & h3{
+            color: #fff;
+          }
+          & p{
+            color: #c7b299;
+          }
+          &::after{
+            border-bottom: 15px solid #362f2d;
+          }
+        }
+      }
+      &--desc{
+        padding: 30px;
+        background: #fbfaf8;
+        position: relative;
+        & h3{
+          color: #c7b299;
+          margin: 0;
+          font-size: 20px;
+        }
+        & p{
+          color: #d1d1d1;
+          margin-top: 7px;
+          margin-bottom: 0;
+          font-size: 14px;
+        }
+        &::after{
+          content: '';
+          position: absolute;
+          left: 20px;
+          top: -35px;
+          border: 20px solid transparent;
+          border-bottom: 15px solid #fbfaf8;
+        }
+      }
+    }
+  }
+}
+.mfp{
+  &-content{
+    width: 800px;
+  }
+  &-zoom-out-cur{
+      cursor: default;
+      & .mfp-image-holder .mfp-close {
+      cursor: pointer;
+    }
+  }
+}
+img.mfp-img {
+    width: 100%;
+    min-height: 600px;
+}
+@media (min-width:769px) and (max-width:1024px){
+  .works__portfolio--item{
+    margin-bottom: 30px;
+    &--desc{
+      &::after {
+        top: -34px;
+      }
+    }
+  }
+}
+@media (max-width:768px){
+  .works__portfolio--item{
+    margin-bottom: 30px;
+    &--desc{
+      &::after {
+        top: -34px;
+      }
+    }
+  }
+}
