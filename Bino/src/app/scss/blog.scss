@@ -29,8 +29,12 @@
   }
   &__content{
     &--img{
+
+      height: 100%;
       & img{
         display: block;
+        height: 100%;
+        width: 100%;
       }
     }
     &--desc{
@@ -99,7 +103,7 @@
   .blog{
     &__content{
       & img{
-        width: 100%;
+        //width: 100%;
       }
       & .row-md {
         & .row{
