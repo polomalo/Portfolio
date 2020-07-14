@@ -1,19 +1,184 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Raleway:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Yellowtail&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css');
 
 
-
-.phon {
-  background: rgb(94, 21, 104);
+*{
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
 }
-
+body{
+  margin: 0;
+}
 img {
   max-width: 100%;
 }
+a{
+  text-decoration: none;
+  outline: none;
+}
+ul{
+  list-style-type: none;
+}
+h1{
+  font-size: 60px;
+  margin: 0;
+  color: $color-white;
+  font-family: 'Yellowtail', cursive;
+}
+h3{
+  font-size: 20px;
+  color: $color-h3-h2;
+}
+h2{
+  color: $color-h3-h2;
+}
+p{
+  margin: 0;
+  font-size: 12px;
+  color: $color-gray-dark3;
+}
+button{
+  outline: none;
+}
+.pad-15{
+  margin: 0 -15px;
+}
+.pad-15 > div{
+  padding: 0 15px;
+}
+.pad-25{
+  margin: 0 -25px;
+}
+.pad-25 > div{
+  padding: 0 25px;
+}
+.col-2 {
+  width: 16.666%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.333%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-8{
+  width: 66.666%;
+}
+.col-10{
+  width: 83.333%;
+}
+.col-12{
+  width: 100%;
+}
+.col-5{
+  width: 20%;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.col-40{
+  width: 40%;
+}
+.col-60{
+  width: 60%;
+}
 
+@media (min-width:769px) and (max-width:1024px) {
+  .row-md{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container-md{
+    width: 994px;
+  }
+  .col-md-2 {
+    width: 16.666%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.333%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-8{
+    width: 66.666%;
+  }
+  .col-md-10{
+    width: 83.333%;
+  }
+  .col-md-12{
+    width: 100%;
+  }
+  .pad-md-15{
+    margin: 0 -15px;
+  }
+  .pad-md-15 > div{
+    padding: 0 15px;
+  }
+}
+@media (max-width:768px) {
+  p{
+    font-size: 18px;
+  }
+  .row-xs{
+    flex-wrap: wrap;
+  }
+  .container-xs{
+    width: 100%;
+  }
+  .col-xs-2 {
+    width: 16.666%;
+  }
+  .col-xs-3 {
+    width: 25%;
+  }
+  .col-xs-4 {
+    width: 33.333%;
+  }
+  .col-xs-6 {
+    width: 50%;
+  }
+  .col-xs-8{
+    width: 66.666%;
+  }
+  .col-xs-10{
+    width: 83.333%;
+  }
+  .col-xs-12{
+    width: 100%;
+  }
+}
 @import "app/_scss-core/_core";
 
 @import "scss/helpers";
 @import "scss/typography";
-
-
-
+@import "scss/header";
+@import "scss/banner";
+@import "scss/whoWeAre";
+@import "scss/aboutUs";
+@import "scss/services";
+@import "scss/platforms";
+@import "scss/portfolio";
+@import "scss/caseStudy";
+@import "scss/statistics";
+@import "scss/pricing";
+@import "scss/team";
+@import "scss/clients";
+@import "scss/blog";
+@import "scss/contact";
+@import "scss/promo";
+@import "scss/footer";

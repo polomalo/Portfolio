@@ -1,0 +1,29 @@
+.footer{
+  padding: 30px 0;
+  background: #202020;
+  &__socials{
+    &--item{
+      margin-right: 15px;
+      & a{
+        & > .facebook, & > .twitter, & > .rss, & > .google,
+        & > .linkedin, & > .skype, & > .vimeo, & > .tumblr{
+          color: $color-gray-dark3;
+          cursor: pointer;
+          &:hover{
+            color: $color-dark-orange;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width:769px) and (max-width:1024px){
+  .footer{
+    &__socials{
+      margin-left: 30px;
+    }
+    &__copyRight{
+      margin-right: 30px;
+    }
+  }
+}

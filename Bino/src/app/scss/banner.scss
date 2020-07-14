@@ -1,0 +1,212 @@
+.banner{
+  min-height: 100vh;
+  position: relative;
+  .slick{
+    &-prev{
+      left: 50px;
+      z-index: 2;
+      background: rgba(111, 111, 111, 0.5);
+      width: 45px;
+      height: 45px;
+      border-radius: 3px;
+      &:before{
+        font-size: 35px;
+        content: '\276E';
+        color: rgba(59, 59, 59, 1);
+        margin-right: 4px;
+        line-height: 24px;
+      }
+      &:hover{
+        background: $color-dark-orange;
+        &:before{
+          color: #ffffff;
+        }
+      }
+    }
+    &-next{
+      right: 50px;
+      z-index: 1;
+      background: rgba(111, 111, 111, 0.5);
+      width: 45px;
+      height: 45px;
+      border-radius: 3px;
+      &:before{
+        font-size: 35px;
+        content: '\276F';
+        color: rgba(59, 59, 59, 1);
+        margin-right: 4px;
+        line-height: 24px;
+      }
+      &:hover{
+        background: $color-dark-orange;
+        &:before{
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  &__slider{
+    &--img{
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+  &__desc{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 600px;
+    & .rowBtn{
+      display: flex;
+    }
+    & h3{
+      color:$color-h3-banner;
+    }
+    & p{
+      color: $color-p-banner;
+    }
+    & .row{
+      justify-content: center;
+      margin: 48px 0;
+    }
+    &--line{
+      width: 80px;
+      height: 2px;
+      background: #f1ebe7;
+      margin-top: 3.5px;
+
+    }
+    &--point{
+      height: 10px;
+      width: 10px;
+      background: $color-dark-orange;
+      border-radius: 50%;
+      margin: 0 15px;
+    }
+    &--button{
+      width: 220px;
+      height: 60px;
+      border-radius: 5px;
+      border: 2px solid $color-white;
+      outline: none;
+      background: transparent;
+      color: $color-white;
+      margin: 70px 30px 0;
+      cursor: pointer;
+      &:hover{
+        background: $color-dark-orange;
+        border: none;
+      }
+    }
+  }
+  &__leftTriangle{
+    position: absolute;
+    width: 50%;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    border-bottom: 125px solid $color-white;
+    border-right: 1000px solid transparent;
+  }
+  &__rightTriangle{
+    position: absolute;
+    width: 50%;
+    height: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 125px solid $color-white;
+    border-left: 1000px solid transparent;
+  }
+  &__anchor{
+    &--front{
+      width: 55px;
+      height: 55px;
+      position: absolute;
+      background: $color-light-grey;
+      border-radius: 50%;
+      left: 50%;
+      bottom: -19px;
+      z-index: 1;
+      transform: translate(-50%, 0);
+      &:before{
+        content: '\2726';
+        font-size: 45px;
+        margin-left: 9px;
+        line-height: 48px;
+        font-weight: bold;
+        color: $color-dark-orange;
+      }
+      &:hover{
+        background: $color-dark-orange;
+        cursor: pointer;
+        &:before{
+          color: #fff;
+        }
+      }
+    }
+
+    &--background{
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      background: rgba(#e74c3c, 0.7);
+      border-radius: 50%;
+      left: 50%;
+      bottom: -2%;
+      z-index: 0;
+      transform: translate(-50%, -2%);
+      &--bottom{
+        width: 60px;
+        height: 30px;
+        background: $color-white;
+        z-index: 1;
+        position: absolute;
+        left: 50%;
+        bottom: -16%;
+        transform: translate(-50%, -16%);
+      }
+    }
+  }
+}
+@media (min-width:769px) and (max-width:1024px){
+  .banner{
+    min-height: 0;
+    &__desc{
+      top: 35%;
+      & .row{
+        margin: 20px 0;
+      }
+      & h3{
+        font-size: 16px;
+      }
+      & h1{
+        font-size: 40px;
+      }
+      &--button{
+        margin: 30px 30px 0;
+      }
+    }
+    &__anchor{
+      &--front{
+        bottom: 5%;
+      }
+      &--background{
+        left: 50%;
+        bottom: 5%;
+        &--bottom{
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.header{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 40px 0;
+  transition: all 1s ease;
+  &__logo{
+    & img{
+      transition: all 1s ease;
+    }
+  }
+  & .row{
+    position: relative;
+  }
+  &__navigation{
+    & ul {
+      display: flex;
+      & li{
+        font-size: 14px;
+        padding: 0 20px;
+        color: $color-light-grey;
+        & a{
+          padding-bottom: 10px;
+          cursor: pointer;
+          &:hover{
+            border-bottom: 2px solid $color-dark-orange;
+            color: $color-dark-orange;
+          }
+        }
+      }
+    }
+  }
+}
+.sticky{
+  background: #202020;
+  padding: 5px 10px ;
+  transition: all 1s ease;
+  & .header{
+    &__logo{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      & img{
+        max-width: 80%;
+        padding-left: 5px;
+        transition: all 1s ease;
+      }
+    }
+  }
+}
+#keks{
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  right: 0;
+  width: 80%;
+  //padding: 0 10px;
+  //transform: translateX(-55%);
+  //flex-wrap: wrap;
+  height: 0;
+  //right: 12%;
+  //width: 20%;
+
+  //max-height: 500px;
+  //list-style-type: none;
+  //padding-left: 0;
+  transition: linear 0.5s;
+}
+#keks.open{
+  //display: flex;
+  //flex-wrap: wrap;
+  //position: absolute;
+  //justify-content: space-between;
+  //flex-direction: column;
+  right: 0;
+  //background: $color-gradient;
+  //height: 60px;
+  height: 80%;
+  width: 80%;
+  //height: 300px;
+  transition: linear 0.5s;
+  //width: 20%;
+  //padding: 15px 0;
+  //border-radius: 15px;
+}
+/*#keks li {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  margin: 0;
+  transition: linear 0.5s;
+}*/
+#header__navigation--burger {
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: 0.5s;
+}
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+@media (min-width:769px) and (max-width:1024px){
+  .header{
+    padding: 10px 0;
+  }
+  #header__navigation--burger {
+      margin-top: 10px;
+  }
+  #keks{
+    & li{
+      padding: 0 10px;
+    }
+  }
+}

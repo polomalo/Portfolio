@@ -1,0 +1,41 @@
+.whoWeAre{
+  padding: 100px 0;
+  &__item{
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    &--icon{
+      height: 70px;
+      position: relative;
+      &--box{
+        width: 70px;
+        height: 70px;
+        background: transparent;
+        border: 2px solid $color-gray;
+        margin: 0 auto;
+        & .glasses, & .heart,
+        & .light, & .comments{
+          font-size: 20px;
+          color: $color-dark-orange;
+          margin: 0 auto;
+          line-height: 3.3;
+        }
+      }
+    }
+    &--desc{
+      position: relative;
+      & p{
+        padding-top: 20px;
+      }
+      &--line{
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        background: #888888;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

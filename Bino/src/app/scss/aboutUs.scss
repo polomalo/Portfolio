@@ -1,0 +1,36 @@
+.aboutUs{
+  padding: 100px 0;
+  border-top: 2px solid #e6e7eb;
+  &__desc{
+    & h2{
+      color: $color-h3-h2;
+      border-left: 5px solid $color-dark-orange;
+      padding-left: 20px;
+      margin: 0 0 40px;
+    }
+    & p{
+      line-height: 2;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+    &--btn{
+      width: 225px;
+      height: 55px;
+      box-shadow: 0px 18px 42px -16px rgba(0,0,0,0.75);
+      color: #fff;
+      background: $color-dark-orange;
+      border: none;
+      border-radius: 3px;
+      &:hover{
+        cursor: pointer;
+        background: #fff;
+        border: 3px solid $color-dark-orange;
+        color: $color-dark-orange;
+        box-shadow: 0px 18px 105px -22px rgba(0,0,0,0.75);
+      }
+    }
+  }
+}
+@media (min-width:769px) and (max-width:1024px){
+
+}

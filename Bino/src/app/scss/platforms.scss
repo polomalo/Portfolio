@@ -1,0 +1,66 @@
+.platforms{
+  padding: 100px 0;
+  &__images{
+    height: 385px;
+    position: relative;
+    &--iphone{
+      display: none;
+      width: 30%;
+    }
+    &--ipad{
+      display: none;
+      width: 80%;
+    }
+    &--macbook{
+      display: none;
+      width: 80%;
+    }
+  }
+  &__types{
+    margin-top: 40px;
+    text-align: center;
+    & button{
+      //width: 40px;
+      margin: 0 10px;
+      padding: 6px;
+      border-radius: 5px;
+      color: $color-dark-orange;
+      background: transparent;
+      border: none;
+      outline: none;
+      &:hover{
+        cursor: pointer;
+        background: $color-dark-orange;
+        color: #fff;
+      }
+    }
+  }
+  &__desc{
+    max-width: 450px;
+    & h2{
+      border-left: 5px solid $color-dark-orange;
+      padding-left: 20px;
+    }
+    &--line{
+      background: $color-dark-orange;
+      width: 400px;
+      height: 3px;
+      margin: 20px 0;
+      border-radius: 40%;
+    }
+    & p{
+      font-size: 16px;
+      line-height: 2;
+    }
+  }
+}
+.show {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.fa-mobile-alt, .fa-laptop, .fa-tablet-alt{
+  font-size: 40px;
+}

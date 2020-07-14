@@ -1,0 +1,132 @@
+.caseStudy{
+  padding: 100px 0;
+  background: $color-gray;
+  &__title{
+    text-align: center;
+    margin-bottom: 70px;
+    & h2{
+      margin: 0;
+    }
+    & p{
+      font-size: 16px;
+      margin: 30px 0;
+    }
+    & .row{
+      justify-content: center;
+    }
+    &--line{
+      width: 80px;
+      height: 2px;
+      background: $color-gray-dark3;
+      margin-top: 3.5px;
+    }
+    &--point{
+      height: 10px;
+      width: 10px;
+      background: $color-dark-orange;
+      border-radius: 50%;
+      margin: 0 15px;
+    }
+  }
+  &__desc{
+    height: 727px;
+    position: relative;
+    &--slider{
+      box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.75);
+      height: 630px;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 55%;
+      text-align: center;
+      &--item{
+        margin-top: 100px;
+        max-width: 550px;
+        &--icon{
+          width: 70px;
+          height: 70px;
+          background: $color-dark-orange;
+          margin: 0 auto;
+          position: relative;
+          transform: rotate(45deg);
+          &--box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #fff;
+            font-size: 25px;
+            transform: translate(-50%, -50%) rotate(-45deg);
+          }
+        }
+        &--desc{
+          &--p{
+            font-size: 18px;
+          }
+          &--line{
+            width: 40px;
+            height: 2px;
+            background: $color-dark-orange;
+            margin: 0 auto;
+            margin-bottom: 20px;
+          }
+          & button{
+            width: 145px;
+            height: 45px;
+            background: $color-dark-orange;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            margin-top: 50px;
+            &:hover{
+              cursor: pointer;
+              background: #fff;
+              border: 3px solid $color-dark-orange;
+              color: $color-dark-orange;
+              box-shadow: 0px 18px 105px -22px rgba(0,0,0,0.75);
+            }
+          }
+        }
+      }
+      & .slick{
+        &-dots{
+          bottom: 10%;
+          & li{
+            width: 20px;
+            height: 20px;
+            & button{
+              outline: none;
+              &:hover:before{
+                color: $color-dark-orange;
+                opacity: 0.75;
+              }
+              &:before{
+                font-size: 22px;
+                content: '•';
+                color: $color-gray-dark3;
+                opacity: 0.75;
+              }
+            }
+            //.slick-dots li button:before
+            &.slick-active button:before {
+                color: $color-dark-orange;
+                font-size: 22px;
+                opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.first{
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+.second{
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 727px;
+}

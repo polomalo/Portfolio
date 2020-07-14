@@ -1,0 +1,120 @@
+.services{
+  background: url('../images/servicesBackground.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+  & h2{
+    border-right: 5px solid $color-dark-orange;
+    color: $color-white;
+    padding-right: 20px;
+    margin: 0 0 40px 27%;
+    max-width: 300px;
+    font-size: 36px;
+  }
+  &__slider{
+    .slick{
+      &-dots{
+        top: 50%;
+        bottom: 0;
+        left: -27%;
+        width: 20%;
+        transform: translateY(-50%);
+        & li{
+          display: flex;
+          flex-direction: column;
+          background: #3e3e3e;
+          width: 3px;
+          height: 40px;
+          margin-bottom: 10px;
+          &:hover{
+            background: $color-gray-light;
+          }
+          & button{
+            width: 3px;
+            height: 40px;
+            &:before{
+              font-size: 25px;
+              width: 5px;
+              height: 20px;
+              content: '';
+            }
+          }
+          &.slick-active button:before {
+              color: #fff;
+              font-size: 25px;
+              font-weight: bold;
+              width: 5px;
+              height: 40px;
+              background: $color-dark-orange;
+          }
+        }
+      }
+    }
+    &--item{
+      text-align: right;
+      max-width: 740px;
+      &--desc{
+        & h3{
+          margin: 10px 0;
+          color: $color-dark-orange;
+        }
+      }
+      &--icon{
+        position: relative;
+        height: 100%;
+        &--background{
+          background: rgba(255, 255, 255, 0.35);
+          height: 60%;
+          width: 60%;
+          border-radius: 50%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &--front{
+          background: #fff;
+          height: 90%;
+          width: 90%;
+          border-radius: 50%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+      }
+      &--p{
+        line-height: 2.5;
+      }
+    }
+  }
+}
+.fa-camera, .fa-tv, .fa-layer-group{
+  font-size: 26px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $color-dark-orange;
+}
+@media (min-width:769px) and (max-width:1024px){
+  .services{
+    background: #202020;
+    text-align: center;
+    & h2{
+      margin: 0 auto 40px;
+      font-size: 30px;
+      padding-right: 10px;
+    }
+    &__slider{
+      left: 0;
+      .slick{
+        &-dots{
+          left: 0;
+
+        }
+      }
+    }
+  }
+}
