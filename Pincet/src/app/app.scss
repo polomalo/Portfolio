@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
+
+
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+p{
+  font-size: 0.9vw;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  outline: none;
+}
+img {
+  max-width: 100%;
+}
+.col-2 {
+  width: 16.666vw;
+}
+.col-3 {
+  width: 25vw;
+}
+.col-4 {
+  width: 33.333vw;
+}
+.col-6 {
+  width: 50vw;
+}
+.col-8{
+  width: 66.666vw;
+}
+.col-10{
+  width: 83.333vw;
+}
+.col-12{
+  width: 100vw;
+}
+.col-5{
+  width: 20vw;
+}
+.container {
+  width: 81.25vw;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width:768px) and (max-width:992px) {
+  .row-md{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container-md{
+    width: 962px;
+  }
+  .col-md-2 {
+    width: 16.666%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.333%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-8{
+    width: 66.666%;
+  }
+  .col-md-10{
+    width: 83.333%;
+  }
+  .col-md-12{
+    width: 100%;
+  }
+}
+@media (max-width:768px) {
+  p{
+    font-size: 18px;
+  }
+  .row-xs{
+    flex-wrap: wrap;
+  }
+  .container-xs{
+    width: 100%;
+  }
+  .col-xs-2 {
+    width: 16.666%;
+  }
+  .col-xs-3 {
+    width: 25%;
+  }
+  .col-xs-4 {
+    width: 33.333%;
+  }
+  .col-xs-6 {
+    width: 50%;
+  }
+  .col-xs-8{
+    width: 66.666%;
+  }
+  .col-xs-10{
+    width: 83.333%;
+  }
+  .col-xs-12{
+    width: 100%;
+  }
+}
+@import "app/_scss-core/_core";
+
+@import "scss/helpers";
+@import "scss/typography";
+@import "scss/header";
+@import "scss/fonts";
