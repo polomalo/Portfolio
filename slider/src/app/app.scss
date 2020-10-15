@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
+
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+
+
+@import "app/_scss-core/_core";
+
+@import "scss/helpers";
+@import "scss/typography";
+@import "scss/slider";

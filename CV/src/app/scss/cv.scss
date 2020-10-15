@@ -1,0 +1,223 @@
+.cv{
+  &__left{
+    background: #f3f4f5;
+    padding: 100px 0 50px;
+    position: relative;
+    overflow: hidden;
+    &--photo{
+      text-align: center;
+      z-index: 2;
+      position: relative;
+      &--back{
+        width: 260px;
+        height: 260px;
+        background: #fff;
+        border-radius: 50%;
+        margin: 0 auto;
+        position: relative;
+        & img{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 230px;
+          height: 230px;
+          border-radius: 50%;
+        }
+      }
+
+    }
+    &--contactInfo{
+      padding: 50px 80px;
+      color: #363636;
+      &--mob{
+        margin-bottom: 10px;
+        & a{
+          &:hover{
+            color: #f0ae12;
+          }
+          &:visited{
+            color: #363636;
+          }
+        }
+      }
+      &--email{
+        margin-bottom: 10px;
+        & a{
+          &:hover{
+            color: #f0ae12;
+          }
+          &:visited{
+            color: #363636;
+          }
+        }
+      }
+    }
+    &--education{
+      padding: 0 80px;
+      color: #363636;
+      &--item{
+        & p:first-child{
+          background: #f0ae12;
+          max-width: 100px;
+          padding: 3px;
+          font-weight: 600;
+          text-align: center;
+          border-radius: 6px;
+        }
+      }
+    }
+    &--courses{
+      padding: 50px 80px;
+      color: #363636;
+      &--item{
+        & p:first-child{
+          background: #f0ae12;
+          max-width: 130px;
+          padding: 3px;
+          font-weight: 600;
+          text-align: center;
+          border-radius: 6px;
+        }
+      }
+    }
+    &--skills{
+      padding: 0 80px;
+      color: #363636;
+      &--item{
+        margin-bottom: 20px;
+        &--rate{
+          height: 20px;
+          position: relative;
+          background: #e1e1e1;
+          border-radius: 10px;
+          overflow: hidden;
+          &>span{
+            display: block;
+            height: 100%;
+            border-radius: 10px;
+            background: #f0ae12;
+          }
+        }
+      }
+    }
+    &--leftParal{
+      position: absolute;
+      top: -50px;
+      left: -120px;
+      z-index: 1;
+      & img{
+        width: 60%;
+      }
+    }
+    &--rightParal{
+      position: absolute;
+      top: 120px;
+      right: -80px;
+      z-index: 2;
+      opacity: 0.6;
+      & img{
+        width: 30%;
+      }
+    }
+  }
+  &__right{
+    padding: 100px 50px 50px;
+    & h1{
+      margin: 50px 0 10px;
+      & span{
+        font-size: 55px;
+        color: #f0ae12;
+      }
+    }
+    &>h2{
+      font-size: 32px;
+      font-weight: 400;
+    }
+    &--aboutMe{
+      margin: 142px 0 35px;
+      color: #707070;
+    }
+    &--why{
+      color: #707070;
+      margin-bottom: 75px;
+    }
+    &--hobbies{
+      margin-bottom: 50px;
+      &--item{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #464646;
+        position: relative;
+        & span{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          display: block;
+          width: 75px;
+          height: 75px;
+          background: #fff;
+          border-radius: 50%;
+        }
+      }
+    }
+    &--portfolio{
+      &--item{
+        height: 120px;
+        position: relative;
+        background: #e1e1e1;
+        border-radius: 10px;
+        z-index: 2;
+        & img{
+          display: block;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &:hover{
+          cursor: pointer;
+          -webkit-box-shadow: 0px 0px 6px 0px rgba(#464646,0.75);
+          -moz-box-shadow: 0px 0px 6px 0px rgba(#464646,0.75);
+          box-shadow: 0px 0px 6px 0px rgba(#464646,0.75);
+          .cv__right--portfolio--item--hover{
+            display: block;
+          }
+        }
+        &--hover{
+          display: none;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background: rgba(#f0ae12, 0.3);
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+.fas{
+  margin-right: 15px;
+  color: #f0ae12;
+}
+.fa-car, .fa-motorcycle,
+.fa-bed, .fa-cookie-bite{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: #f0ae12;
+}
+.fa-search{
+  color: #464646;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+}

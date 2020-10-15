@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css');
+
+
+*{
+  box-sizing: border-box;
+  font-size: 18px;
+}
+body{
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+a{
+  text-decoration: none;
+  outline: none;
+  color: #363636;
+}
+h2{
+  margin: 0 0 20px;
+  font-size: 22px;
+  color: #464646;
+}
+h1{
+  font-size: 55px;
+  margin: 0;
+  color: #363636;
+}
+p{
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+.pad-15{
+  margin: 0 -15px;
+}
+.pad-15 > div{
+  padding: 0 15px;
+}
+.col-2 {
+  width: 16.666%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.333%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-8{
+  width: 66.666%;
+}
+.col-10{
+  width: 83.333%;
+}
+.col-12{
+  width: 100%;
+}
+.col-5{
+  width: 20%;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.col-40{
+  width: 40%;
+}
+.col-60{
+  width: 60%;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+@import "app/_scss-core/_core";
+
+@import "scss/helpers";
+@import "scss/typography";
+@import "scss/cv";

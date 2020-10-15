@@ -191,9 +191,6 @@
       margin: 1vw 0 0;
       border-radius: 0.2vw;
       padding: 0 2vw;
-
-
-
       &--list{
         display: flex;
         margin: 0;
@@ -563,6 +560,9 @@
     }
   }
 }
+#header__nav--burger{
+  display: none;
+}
 @keyframes pulse {
   0% {
     transform: scale(0vw);
@@ -606,8 +606,9 @@
       }
       &__location{
         &--map{
-          width: 40%;
+          width: 100%;
           height: 100%;
+          margin-top: 15px;
         }
         &--info{
           margin-top: 25px;
@@ -633,33 +634,37 @@
         }
       }
       &__contactInfo{
+        margin-top: 30px;
         margin-left: 30px;
         &--mob{
           &--icon{
             width: 50px;
-            height: 50px;
             box-shadow: 0px 0px 40px -8px rgba(0,0,0,0.25);
+            background: transparent;
+            margin-top: 20px;
           }
           &--desc{
             margin-left: 5px;
             & p{
               font-size: 16px;
               height: 20px;
+              margin-bottom: 15px;
             }
             &--indicator{
               width: 10px;
               height: 10px;
             }
             & a{
-              font-size: 24px;
+              font-size: 16px;
             }
           }
         }
         &--time{
           &--icon{
             width: 50px;
-            height: 50px;
             box-shadow: 0px 0px 40px -8px rgba(0,0,0,0.25);
+            background: transparent;
+            margin-top: 20px;
           }
           &--desc{
             margin-top: 18px;
@@ -668,7 +673,7 @@
               font-size: 24px;
               height: 20px;
               & span{
-                font-size: 24px;
+                font-size: 16px;
               }
             }
             & a{
@@ -680,7 +685,7 @@
       &__signUp{
         width: 80%;
         height: 40%;
-        margin: 30px auto 0;
+        margin: 40px auto 0;
         border-bottom: 2px solid #ebeaea;
         &--desc{
           width: 80%;
@@ -723,7 +728,7 @@
       right: 10%;
       width: 28%;
       padding: 10px;
-      height: 350px;
+      height: 370px;
       display: block;
       border-radius: 30px;
       transition: linear 0.5s;
@@ -731,6 +736,7 @@
     }
     #header__nav--burger {
       position: absolute;
+      display: block;
         cursor: pointer;
         top: -50%;
         right: 5%;
@@ -739,8 +745,9 @@
       &--desc{
         padding: 0;
         &--title{
+          max-width: 300px;
           & h1{
-            font-size: 30px;
+            font-size: 24px;
           }
         }
         &--list{
@@ -769,10 +776,13 @@
           &--info{
             left: 45%;
             bottom: 20%;
-            max-width: 50%;
+            max-width: 70%;
             &--show{
               bottom: 70%;
               left: 70%;
+              & p{
+                font-size: 12px;
+              }
             }
           }
         }
@@ -783,8 +793,445 @@
         top: auto;
       }
     }
+  }
+}
+@media (min-width:556px) and (max-width:767px){
+  .banner{
+    & .header{
+      &__logo{
+        text-align: center;
+      }
+      &__description{
+        max-width: 100%;
+        text-align: center;
+        & p{
+          font-size: 30px;
+        }
+      }
+      &__location{
+        &--map{
+          margin-top:30px;
+          width: 100%;
+          height: 100%;
+        }
+        &--info{
+          margin-top: 25px;
+          & p{
+            font-size:12px;
+          }
+          &--showMap{
+            max-width: 100%;
+          }
+        }
+        &--mapFrame{
+          position: absolute;
+          z-index: 2;
+          top: 80%;
+          display: none;
+          width: 300px;
+          height: 300px;
+          overflow: hidden;
+          & iframe{
+            width: 300px;
+            height: 300px;
+          }
+        }
+      }
+      &__contactInfo{
+        margin-top: 10px;
+        margin-left: 30px;
+        &--mob{
+          &--icon{
+            width: 60px;
+            margin-top: 30px;
+            box-shadow: 0px 0px 40px -8px rgba(0,0,0,0.25);
+            background: transparent;
+          }
+          &--desc{
+            margin-left: 5px;
+            margin-top: 10px;
+            & p{
+              font-size: 12px;
+              height: 20px;
+              margin-bottom: 15px;
+            }
+            &--indicator{
+              margin-top: 10px;
+              width: 10px;
+              height: 6px;
+            }
+            & a{
+              font-size: 11px;
+            }
+          }
+        }
+        &--time{
+          &--icon{
+            margin-top: 20px;
+            width: 50px;
+            box-shadow: 0px 0px 40px -8px rgba(0,0,0,0.25);
+            background: transparent;
+          }
+          &--desc{
+            margin-top: 14px;
+            margin-left: 5px;
+            & p{
+              font-size: 12px;
+              height: 20px;
+              & span{
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+      &__signUp{
+        width: 80%;
+        height: 40%;
+        margin: 40px auto 0;
+        border-bottom: 2px solid #ebeaea;
+        &--desc{
+          width: 80%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          & img{
+            width: 20px;
+            height: 20px;
+          }
+          & span{
+            margin-left: 10px;
+            font-size: 14px;
+          }
+        }
+      }
+      &__nav{
+        background: transparent;
+        //position: relative;
+      }
+      &__bottomBox{
+        display: none;
+      }
+    }
+    #header__nav--list{
+      position: absolute;
+      text-align: center;
+      background: #fff;
+      display: none;
+      transition: linear 0.5s;
+      z-index: 4;
+      & li{
+        & a{
+          font-size: 20px;
+        }
+      }
+    }
+    #header__nav--list.open{
+      right: 15%;
+      top: 10%;
+      width: 40%;
+      padding: 10px;
+      height: 270px;
+      display: block;
+      border-radius: 30px;
+      transition: linear 0.5s;
+      z-index: 4;
+    }
+    #header__nav--burger {
+      position: absolute;
+      display: block;
+        cursor: pointer;
+        top: 10%;
+        right: 5%;
+    }
+    &__content{
+      position: relative;
+      &--desc{
+
+        padding: 0;
+        &--title{
+          max-width: 260px;
+          margin: 0 auto;
+          & h1{
+            font-size: 24px;
+          }
+        }
+        &--list{
+          max-width: 380px;
+          margin: 0 auto;
+          & ul{
+            & li{
+              font-size: 16px;
+            }
+          }
+        }
+        &--btn{
+          width: 200px;
+          height: 50px;
+          margin: 40px auto;
+          & span{
+            font-size: 12px;
+            max-width: 100px;
+          }
+          &--branch{
+            max-width: 80%;
+            right: -90px;
+          }
+        }
+        &--card{
+          position: relative;
+          left: 25%;
+          //transform: translate(-50%);
+          max-width: 70%;
+          bottom: 0;
+          &--info{
+            left: 45%;
+            bottom: 20%;
+            max-width: 80%;
+            &--show{
+              width: 100%;
+              bottom: 70%;
+              left: 70%;
+              & p{
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+      &--women{
+        position: relative;
+        max-width: 100%;
+        bottom: -10%;
+        right: -10%;
+        top: auto;
+      }
+      &--wave{
+        margin-top: 0;
+      }
+    }
     &__popup{
 
+    }
+  }
+}
+@media (max-width:555px){
+  .banner{
+    & .header{
+      &__logo{
+        text-align: center;
+      }
+      &__description{
+        max-width: 100%;
+        text-align: center;
+        & p{
+          font-size: 30px;
+        }
+      }
+      &__location{
+        text-align: center;
+        &--map{
+          width: 100%;
+          height: 100%;
+        }
+        &--info{
+          & p{
+            font-size:16px;
+          }
+          &--showMap{
+            max-width: 100%;
+          }
+        }
+        &--mapFrame{
+          position: absolute;
+          z-index: 2;
+          top: 70%;
+          left: 50%;
+          transform: translateX(-50%);
+          display: none;
+          width: 300px;
+          height: 300px;
+          overflow: hidden;
+          & iframe{
+            width: 300px;
+            height: 300px;
+          }
+        }
+      }
+      &__contactInfo{
+        width: 60%;
+        margin: 20px auto;
+        &--mob{
+          &--icon{
+            width: 60px;
+            margin-top: 20px;
+            box-shadow: 0px 0px 40px -8px rgba(0,0,0,0.25);
+            background: transparent;
+          }
+          &--desc{
+            margin-left: 5px;
+            margin-top: 10px;
+            & p{
+              font-size: 16px;
+              height: 20px;
+              margin-bottom: 15px;
+            }
+            &--indicator{
+              width: 10px;
+              height: 10px;
+              margin-top: 5px;
+              margin-right: 5px;
+            }
+            & a{
+              font-size: 18px;
+            }
+          }
+        }
+        &--time{
+          &--icon{
+            margin-top: 20px;
+            width: 60px;
+            box-shadow: 0px 0px 40px -8px rgba(0,0,0,0.25);
+            background: transparent;
+          }
+          &--desc{
+            margin-top: 14px;
+            margin-left: 5px;
+            & p{
+              font-size: 16px;
+              height: 20px;
+              & span{
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+      &__signUp{
+        width: 40%;
+        height: 50px;
+        margin: 20px auto 0;
+        border-bottom: 2px solid #ebeaea;
+        &--desc{
+          width: 80%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          & img{
+            width: 20px;
+            height: 20px;
+          }
+          & span{
+            margin-left: 10px;
+            font-size: 18px;
+          }
+        }
+      }
+      &__nav{
+        background: transparent;
+      }
+      &__bottomBox{
+        display: none;
+      }
+    }
+    #header__nav--list{
+      position: absolute;
+      text-align: center;
+      background: #fff;
+      display: none;
+      transition: linear 0.5s;
+      z-index: 4;
+      & li{
+        & a{
+          font-size: 20px;
+        }
+      }
+    }
+    #header__nav--list.open{
+      right: 15%;
+      top: 10%;
+      width: 40%;
+      padding: 10px;
+      height: 270px;
+      display: block;
+      border-radius: 30px;
+      transition: linear 0.5s;
+      z-index: 4;
+    }
+    #header__nav--burger {
+      position: absolute;
+      display: block;
+        cursor: pointer;
+        top: 10%;
+        right: 5%;
+    }
+    &__content{
+      position: relative;
+      &--desc{
+
+        padding: 0;
+        &--title{
+          max-width: 260px;
+          margin: 0 auto;
+          & h1{
+            font-size: 24px;
+          }
+        }
+        &--list{
+          max-width: 380px;
+          margin: 0 auto;
+          & ul{
+            & li{
+              font-size: 16px;
+            }
+          }
+        }
+        &--btn{
+          width: 200px;
+          height: 50px;
+          margin: 40px auto;
+          & span{
+            font-size: 12px;
+            max-width: 100px;
+          }
+          &--branch{
+            max-width: 80%;
+            right: -90px;
+          }
+        }
+        &--card{
+          position: relative;
+          left: 25%;
+          //transform: translate(-50%);
+          max-width: 70%;
+          bottom: 0;
+          &--info{
+            left: 45%;
+            bottom: 20%;
+            max-width: 80%;
+            &--show{
+              width: 100%;
+              bottom: 70%;
+              left: 70%;
+              & p{
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+      &--women{
+        position: relative;
+        max-width: 100%;
+        bottom: -10%;
+        right: -10%;
+        top: auto;
+      }
+      &--wave{
+        margin-top: 0;
+      }
     }
   }
 }
