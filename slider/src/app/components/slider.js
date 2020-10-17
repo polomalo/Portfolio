@@ -1,9 +1,9 @@
 let mySlider = (function() {
-  return function (selector, config) {
+  return function (selector, selector_wrap, selector_items, config) {
     let
       slider = document.querySelector(selector),
-      sliderWrapper = slider.querySelector('.slider__wrap'),
-      sliderItems = slider.querySelectorAll('.slider__wrap--item'),
+      sliderWrapper = slider.querySelector(selector_wrap),
+      sliderItems = slider.querySelectorAll(selector_items),
       sliderWrapperWidtn = sliderWrapper.offsetWidth,
       sliderItemWidth = sliderItems[0].offsetWidth,   
       positionCurrentItem = 0,
@@ -287,7 +287,7 @@ let mySlider = (function() {
   }
 }());
 
-let slider = mySlider('.slider', {
+let slider = mySlider('.slider', '.slider__wrap', '.slider__wrap--item', {
   cycling: true,
   swipeOnDesk: false
 })
