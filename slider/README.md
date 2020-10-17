@@ -19,12 +19,12 @@ The slider has several features:
 9. Supports any HTML content
 
 Example:
-mySlider('.slider', '.slider\_\_wrap', '.slider\*\*wrap--item',{
-cycling: true/false, - 1
-direction: 'left'/'right', - 2
-interval: 4000(any numeric value), - 3
-pause: true/false - 4
-swipeOnDesk: false - 5
+  mySlider('.slider', '.slider__wrap', '.slider__wrap--item',{
+  cycling: true/false, - 1
+  direction: 'left'/'right', - 2
+  interval: 4000(any numeric value), - 3
+  pause: true/false - 4
+  swipeOnDesk: false - 5
 })
 
 !!!!When calling the function you should to specify your slider class, items wrapper class and items class
