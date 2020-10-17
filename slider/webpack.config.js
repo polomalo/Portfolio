@@ -4,7 +4,6 @@ const argv = require('yargs').argv;
 
 const fs   = require('fs');
 
-// const chalk = require('chalk');
 
 require('dotenv').config();
 
