@@ -18,13 +18,13 @@ The slider has several features:
 8. Adaptive
 9. Supports any HTML content
 
-Example:
-  mySlider('.slider', '.slider__wrap', '.slider__wrap--item',{
-  cycling: true/false, - 1
-  direction: 'left'/'right', - 2
-  interval: 4000(any numeric value), - 3
-  pause: true/false - 4
-  swipeOnDesk: false - 5
+Example:<br>
+  &nbsp;mySlider('.slider', '.slider__wrap', '.slider__wrap--item',{<br>
+  &nbsp;cycling: true/false, - 1<br>
+  &nbsp;direction: 'left'/'right', - 2<br>
+  &nbsp;interval: 4000(any numeric value), - 3<br>
+  &nbsp;pause: true/false - 4<br>
+  &nbsp;swipeOnDesk: false - 5<br>
 })
 
 !!!!When calling the function you should to specify your slider class, items wrapper class and items class
